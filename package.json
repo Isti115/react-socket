@@ -52,7 +52,7 @@
         "lint"      : "eslint src",
         "test"      : "NODE_ENV=test babel-node test",
         "cover"     : "nyc --reporter=lcov --reporter=text npm test",
-        "clean"     : "rm -rf lib/*.*",
+        "clean"     : "rm lib/*.* -Recurse -Force",
         "build"     : "npm run clean && babel src -d lib",
         "dist"      : "webpack --optimize-minimize lib/dist.js dist.js",
         "prepare"   : "npm run build && npm run dist"
